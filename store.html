@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	
+	
+<meta name="keywords" content=",,,,,," />
+ <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name = "format-detection" content = "telephone=no">
+
+<link href="css/common.css" rel="stylesheet" type="text/css" /> 
+<link href="css/store.css" rel="stylesheet" type="text/css" />
+
+
+	
+<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<script>
+   (function(d) {
+     var config = {
+       kitId: 'dgw3vbb',
+       scriptTimeout: 3000,
+       async: true
+     },
+     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+   })(document);
+ </script>
+
+<title></title>
+
+
+
+<!--nav-->
+<script src="nav/jquery-3.3.1.min.js"></script>	
+	
+<script type="text/javascript" src="nav/script.js"></script>
+	
+<link href="nav/style.css" rel="stylesheet" type="text/css" />
+
+
+
+<!--imgchange-->
+
+<script src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+    var wid = $(window).width();
+    if( wid < 640 ){
+        $('.imgChange').each(function(){
+            $(this).attr("src",$(this).attr("src").replace('_pc', '_sp'));
+        });
+    }
+});</script>
+
+
+
+
+
+
+<!-- スムーズスクロール -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+
+
+
+<script>
+$(function() {
+	$("body").on("click", "a", function(e) {
+		var _this = $(this);
+		var _href = _this.attr("href");
+
+		if (_href.charAt(0,1) == "#") {
+			e.preventDefault();
+			var _target  = $(_href == "#" || _href == "" ? $("html") : _href);
+			if (_target.length == "0") _target = $("html");
+			var position = _target.offset().top;
+			var _scroll  = _this.data("scroll");
+			if (_scroll !== undefined) position = position + Number(_scroll);
+			if (position <= 0) position = 1;	//Android2系でスクロールのバグ対策
+			$("html, body").animate({scrollTop : position} ,500, "swing");
+			return false;
+		}
+	});
+});
+
+</script>
+
+<!--sride-->
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+
+	
+<script type="text/javascript" src="sride/jquery.glide.min.js"></script>
+	
+<link href="sride/slide.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('.slider').bxSlider(
+	
+	{
+		auto: true,
+		pause:	8000,
+		speed:1000,
+		mode: 'horizontal',
+		infiniteLoop: true, //ループさせるか否か
+		pager:true
+		}
+
+		
+	
+	);
+});</script>
+	
+	
+<script type="text/javascript">
+   $(function() {
+      // スクロールしたときに実行
+      $(window).scroll(function () {
+         // 目的のスクロール量を設定(px)
+         var TargetPos = -150;
+         // 現在のスクロール位置を取得
+         var ScrollPos = $(window).scrollTop();
+         // 現在位置が目的のスクロール量に達しているかどうかを判断
+         if( ScrollPos >= TargetPos) {
+            // 達していれば表示
+            $("#topbutton01").fadeIn();
+         }
+         else {
+            // 達していなければ非表示
+            $("#topbutton01").fadeOut();
+         }
+      });
+   });
+</script>
+	
+	
+<script type="text/javascript">
+   $(function() {
+      // スクロールしたときに実行
+      $(window).scroll(function () {
+         // 目的のスクロール量を設定(px)
+         var TargetPos = 150;
+         // 現在のスクロール位置を取得
+         var ScrollPos = $(window).scrollTop();
+         // 現在位置が目的のスクロール量に達しているかどうかを判断
+         if( ScrollPos >= TargetPos) {
+            // 達していれば表示
+            $("#topbutton02").fadeIn();
+         }
+         else {
+            // 達していなければ非表示
+            $("#topbutton02").fadeOut();
+         }
+      });
+   });
+</script>
+	
+	
+	
+<script type="text/javascript">
+   $(function() {
+      // スクロールしたときに実行
+      $(window).scroll(function () {
+         // 目的のスクロール量を設定(px)
+         var TargetPos = 150;
+         // 現在のスクロール位置を取得
+         var ScrollPos = $(window).scrollTop();
+         // 現在位置が目的のスクロール量に達しているかどうかを判断
+         if( ScrollPos >= TargetPos) {
+            // 達していれば表示
+            $("#topbutton03").fadeIn();
+         }
+         else {
+            // 達していなければ非表示
+            $("#topbutton03").fadeOut();
+         }
+      });
+   });
+</script>	
+	
+	
+
+
+</head>
+
+<body>
+
+	
+
+<div class="wrapper">
+<main>	
+	
+<div id="topbutton01">
+<div id="header">
+
+<div class="in cf">
+
+<div id="logo"><a href="index.html"><img src="img/logo.png"  alt="ロゴ"/></a></div>
+
+<div id="mail-top" class="only-sp"><a href="contact.html"><img src="img/mail_sp.png"  alt="メール" class="imgChange"/></a></div>
+
+	
+	
+<div id="gnav" class="only-pc">
+<ul class="cf">
+
+   <li class="gnav-home"><a href="index.html">HOME</a></li>
+
+   <li class="gnav-management"><a href="management.html">経営理念</a></li>
+      
+   <li class="gnav-business"><a href="business.html">事業案内</a></li>
+      
+   <li class="gnav-store"><a href="store.html">店舗案内</a></li>
+      
+   <li class="gnav-comp"><a href="comp.html">会社概要</a></li>
+      
+   <li class="gnav-recruitment"><a href="recruitment.html">採用情報</a></li>
+	
+</ul>
+<!--gnav--></div>
+	
+
+
+<!--in--></div>
+<!--header--></div>
+<!--topbutton01--></div>
+
+
+<div id=fixed-cover></div>
+<div id="store-bg">
+   <div id ="store-content">
+      <img src="img/office-title.png" alt="" class="office">
+   　 <h2 class="store-infomation">店舗案内</h2>
+      <h3 id="sinjyuku">≪新宿店≫</h3>
+      <p class="address">〒151-0053</br>
+      東京都渋谷区代々木2-23-1 ニューステイトメナー1342 号室</br>
+      TEL:03-6300-6720、03-6300-4300　FAX:03-6300-6741
+      </p>
+   <div class="office-map">
+      <div class="office-map-left">
+         <img src="img/office-sinjyuku1.JPG" alt="" class="picture" >
+         <img src="img/office-sinjyuku2.JPG" alt="" class="picture">
+     </div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.1615408027579!2d139.6975973292266!3d35.68571358804633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cce25576e17%3A0xe3bd3da162059dcc!2z44CSMTUxLTAwNTMg5p2x5Lqs6YO95riL6LC35Yy65Luj44CF5pyo77yS5LiB55uu77yS77yT4oiS77yR!5e0!3m2!1sja!2sjp!4v1621738719460!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" class="iframe"></iframe>
+         <div class="office-map-right">   
+         <img src="img/office-sinjyuku3.JPG" alt="" class="picture">
+         <img src="img/office-sinjyuku4.JPG" alt="" class="picture"> 
+     </div>  
+   </div>
+   <p class="line"></p>
+
+   <h3 id="funabashi">≪船橋店≫</h3>
+      <p class="address">〒273-0005</br>
+         千葉県船橋市本町6-2-10 ダイアパレスステーションプラザ1307 号室</br>
+         TEL:047-409-8860、047-409-9523　FAX:047-409-8871
+      </p>
+   <div class="office-map">
+      <div class="office-map-left">
+         <img src="img/office-funabashi1.JPG" alt="" class="picture" >
+         <img src="img/office-funabashi2.JPG" alt="" class="picture">
+     </div> 
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9256280422833!2d139.9846228155514!3d35.703447736360054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188079c7a6141b%3A0xa0e70a04a3964493!2z44CSMjczLTAwMDUg5Y2D6JGJ55yM6Ii55qmL5biC5pys55S677yW5LiB55uu77yS4oiS77yR77yQIOODgOOCpOOCouODkeODrOOCueOCueODhuODvOOCt-ODp-ODs-ODl-ODqeOCtuiIueapiw!5e0!3m2!1sja!2sjp!4v1621833008742!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" class="iframe"></iframe>
+      <div class="office-map-right">   
+         <img src="img/office-funabashi3.JPG" alt="" class="picture">
+         <img src="img/office-funabashi4.JPG" alt="" class="picture"> 
+     </div>  
+   </div>
+   <p class="line"></p>
+
+   <h3 id="kashiwa">≪柏店≫</h3>
+      <p class="address">〒277-0863</br>
+         千葉県柏市豊四季1008-12 アヴニール豊四季104 号室</br>
+         TEL:04-7157-2052、04-7157-2081　FAX:04-7157-2053
+      </p>
+   <div class="office-map">
+      <div class="office-map-left">
+         <img src="img/office-kashiwa1.JPG" alt="" class="picture" >
+         <img src="img/office-kashiwa2.JPG" alt="" class="picture">
+     </div> 
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.3030868142177!2d139.9366038155547!3d35.86608872741829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189c7fced6aaab%3A0xd8d3ddcb1be2a9a4!2z44Ki44O044OL44O844Or6LGK5Zub5a2j!5e0!3m2!1sja!2sjp!4v1621833262348!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" class="iframe"></iframe>
+      <div class="office-map-right">   
+         <img src="img/office-kashiwa3.jpg" alt="" class="picture">
+         <img src="img/office-kashiwa4.JPG" alt="" class="picture"> 
+     </div>  
+   </div>
+   <p class="line"></p>
+ 
+   <h3 id="yokohama">≪横浜店≫</h3>
+      <p class="address">〒220-0073</br>
+         神奈川県横浜市西区岡野1-10-3 ストーク横浜参番館204 号</br>
+         TEL:045-620-9905、045-534-5327　FAX:045-620-9912
+      </p>
+   <div class="office-map">
+      <div class="office-map-left">
+         <img src="img/office-yokohama1.JPG" alt="" class="picture" >
+         <img src="img/office-yokohama2.JPG" alt="" class="picture">
+     </div> 
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.692205788316!2d139.61439331554672!3d35.46241374954837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c0cfa970fab%3A0xf8083b2922bb2f5f!2z44CSMjIwLTAwNzMg56We5aWI5bed55yM5qiq5rWc5biC6KW_5Yy65bKh6YeO77yR5LiB55uu77yR77yQ4oiS77yRIOOCueODiOODvOOCr-aoqua1nOWPgueVqumkqA!5e0!3m2!1sja!2sjp!4v1621833685160!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" class="iframe"></iframe>
+      <div class="office-map-right">   
+         <img src="img/office-yokohama3.JPG" alt="" class="picture">
+         <img src="img/office-yokohama4.JPG" alt="" class="picture"> 
+     </div>  
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+</div>
+
+
+<div id="footer">
+<div class="in cf">
+  	
+
+
+<ul class="foot_menu cf">
+<li><a href="business.html">【事業案内】</a></li>
+<li></li>
+</ul>
+	
+
+<ul class="foot_menu cf">
+<li><a href="store.html">【店舗案内】</a></li>
+<li class="only-sp"></li>
+<li><a href="store.html#sinjyuku">新宿店</a></li>
+<li><a href="store.html#funabashi">船橋店</a></li>
+<li><a href="store.html#kashiwa">柏店</a></li>
+<li><a href="store.html#yokohama">横浜店</a></li>
+</ul>
+	
+<ul class="foot_menu cf">
+<li><a href="comp.html">【会社概要】</a></li>
+<li></li>
+</ul>
+	
+<ul class="foot_menu cf">
+<li><a href="recruitment.html">【採用情報】</a></li>
+<li></li>
+</ul>
+	
+<ul class="foot_menu cf">
+   <li><a href="conduct.html#antisocial-forces-policy" alt="">反社会勢力排除に関する基本方針</a></li>
+   <li><a href="conduct.html#personal-information" alt="">個人情報保護宣言</a></li>
+   <li><a href="conduct.html#attitude-to-work" alt="">仕事に対する姿勢</a></li>
+<li></li>
+</ul>
+	
+<!--in--></div>
+<!--footer--></div>	
+	
+	
+	
+<diV class="in">
+<p class="foot-logo"><img src="img/logo02.png" alt="foot-logo"/></p>	
+<p class="copy">All-Flat 株式会社　〒151-0053東京都渋谷区代々木2-23-1 ニューステイトメナー1342号　TEL:03-6300-6720　FAX:03-6300-6741<br>
+Copyright (c) All-Flat Co., Ltd. All Rights Reserved.</p>
+</diV>	
+
+
+	  
+<div id="topbutton03" class="cf">
+<p id="back" class="pageTop"><a href="#"><img src="img/gototop.png"  alt="topへ戻る"/></a></p>
+</div>	  
+	  
+</main>
+	
+	
+<div class="only-sp">
+<div class="menu-trigger" href="">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+	
+
+<nav>
+
+
+<ul class="cf">
+<li><a href="index.html">HOME</a></li>
+<li><a href="management.html">経営理念</a></li>
+<li><a href="business.html">事業案内</a></li>
+<li><a href="store.html">店舗案内</a></li>
+<li><a href="comp.html">会社概要</a></li>
+<li><a href="recruitment.html">採用情報</a></li>
+</ul>
+	
+
+ 
+  </nav>
+  <div class="overlay"></div>
+</div>
+
+
+<!--wrapper--></div>
+
+</body>
+</html>
