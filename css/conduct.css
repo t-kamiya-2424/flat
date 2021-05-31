@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (max-width: 639px) {
+
+#fixed-cover {
+    height: 80px;
+}
+
+#conduct-bg {
+    background: url(../img/store_conduct-bg.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0.5%;
+    position: relative;
+    z-index: -1;
+}
+    
+#conduct-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.85);
+}
+    
+#conduct-content {
+    background-color: white;
+    width: 80%;
+    margin: 5% auto;
+    padding: 1% 5% 5% 5%;
+    opacity: 0.86;
+}
+    
+#antisocial-forces-policy, #personal-information, #attitude-to-work {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.5em;
+    color:rgb(69, 101, 151);
+    font-weight: 500;
+    margin: 3% 0 6%;
+}
+    
+.text {
+    margin: 6% 0%;
+    text-align: justify; 
+}
+
+ol {
+    margin-left: 3%;
+}
+
+li {
+    margin-bottom: 6%;
+}
+
+.enactment-date {
+    margin: 5% 0 5% auto;
+    width: 290px;
+}
+
+.line {
+    border-bottom: 4px solid rgb(204, 217, 231);
+    margin: 4% 0;
+}
+
+.compnay-infomation {
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 0.5em;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    color:rgb(69, 101, 151);
+    font-weight: 500;
+}
+
+}
+
+
+@media only screen and (min-width: 640px) {
+
+#conduct-bg {
+    background: url(../img/store_conduct-bg.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0.5%;
+    position: relative; 
+}
+    
+#conduct-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.85);
+}
+    
+#conduct-content {
+    background-color: white;
+    width: 60%;
+    margin: 5% auto;
+    padding: 1% 5% 5% 5%;
+    opacity: 0.86;
+}
+    
+#antisocial-forces-policy, #personal-information, #attitude-to-work {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.5em;
+    color:rgb(69, 101, 151);
+    font-weight: 500;
+    margin: 3% 0 6%;
+}
+    
+.text {
+    font-size: 13.7px;
+    margin: 4% 0%;
+    text-align: justify; 
+}
+
+ol {
+    font-size: 13.7px;
+    margin-left: 3%;
+}
+
+li {
+    margin-bottom: 2%;
+}
+
+.enactment-date {
+    font-size: 13.7px;
+    margin: 5% 0 5% auto;
+    width: 170px;
+}
+
+.line {
+    border-bottom: 4px solid rgb(204, 217, 231);
+    margin: 4% 0;
+}
+
+.compnay-infomation {
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 0.5em;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    color:rgb(69, 101, 151);
+    font-weight: 500;
+}
+
+}

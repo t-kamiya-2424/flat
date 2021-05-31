@@ -1,0 +1,132 @@
+@charset "utf-8";
+/* CSS Document */
+
+h2{color:#ef8796;
+border-bottom: solid 3px #ef8796;
+font-size: 20px;
+margin-bottom: 5%;
+font-family: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+font-weight: bold;}
+
+dl{
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #ddd;
+}
+dt{
+  width: 100%;
+  
+  padding: 2%;
+  border-top: 1px solid #ccc;
+ box-sizing: border-box;
+}
+dd{
+  margin-left: 0%;
+  padding:5% 2%;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  background: #fff;
+}
+/*dd:after{
+  display: block;
+  content: "";
+  clear: both;
+}*/
+
+.pink{background: #fef4f8;}
+.pink-tit{background: #ef8796;
+color: #fff;
+font-family: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+font-size: 25px;
+text-align: center;
+padding: 2% 0%;}
+
+
+.blue-tit{background:#1a72d0;
+	color: #fff;
+font-family: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+font-size: 25px;
+text-align: center;
+padding: 2% 0%;
+margin-bottom: 5%;}
+
+
+table{padding: 2%;}
+table td{border-bottom:solid 1px #000;
+padding: 2% 0%;}
+th{width: 10%;}
+
+th img{width: 50%;}
+
+
+.pic01{width: 90%;
+margin: 5% auto;}
+
+.red{color:red;
+font-size: 30px;}
+
+@media only screen and (min-width: 640px) {
+	
+
+	
+.font-s{font-size:12px;}
+	
+dl{  border:none;
+  width: 100%;
+  overflow: hidden;
+  border-top:1px solid #ccc;
+  background: #ddd;
+
+}
+	
+	
+.last{border-bottom:1px solid #ccc;}	
+	
+	
+dt{
+  width: 30%;
+  float: left;
+  padding: 2% 2% 0% 2%;
+  border-top: none;
+  box-sizing: border-box;
+	line-height: 1.5em;
+}
+dd{
+  margin-left: 30%;
+  padding: 2%;
+  border-left: 1px solid #ccc;
+  border-top: none;
+  background: #fff;
+	
+}
+dd:after{
+  display: block;
+  content: "";
+  clear: both;
+}	
+	
+	
+	
+input[type="image"]{width:40%;
+margin:5% auto;
+display: block;}	
+	
+	
+	
+.blue-tit{
+font-size: 35px;
+}
+	
+.pink-tit{
+font-size: 35px;
+}	
+
+.red{color:red;
+font-size: 30px;}	
+	
+}
+
+
+

@@ -1,0 +1,509 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media only screen and (max-width: 639px) {
+  #fixed-cover {
+    height: 80px;
+  }
+
+  #business-bg {
+    background: url(../img/business_recruitment-bg.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0.5%;
+    position: relative;
+    z-index: -1;
+  }
+
+  #business-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  #business-content {
+    background-color: white;
+    width: 80%;
+    margin: 5% auto;
+    padding: 1% 5% 5% 5%;
+    opacity: 0.85;
+  }
+
+  .service {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .information {
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5em;
+    line-height: 0;
+    color: rgb(69, 101, 151);
+    font-weight: 500;
+  }
+
+  .characteristic {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.7em;
+    margin-top: 7%;
+    color: rgb(69, 101, 151);
+    font-weight: 500;
+  }
+
+  p {
+    margin: 4% 0%;
+    text-align: justify;
+  }
+
+  .under-info {
+    margin-top: 5%;
+    text-align: center;
+  }
+
+  #itemization {
+    margin-left: 4%;
+    margin-top: 7%;
+    display: inline-block;
+    text-align: left;
+  }
+
+  #financial-disclosure {
+    margin-left: 4%;
+    margin-top: 7%;
+    margin-bottom: 11%;
+    display: inline-block;
+    height: 200px;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .this-month {
+    font-size: 15px;
+    color: white;
+    background-color: #1a72d0;
+    text-align: left;
+  }
+
+  .category1 {
+    background-color: white;
+    display: flex;
+    margin-bottom: 5%;
+    height: 25%;
+  }
+
+  .picture1 {
+    width: 25%;
+    margin-left: 5%;
+  }
+
+  .details {
+    font-size: 17px;
+    margin: auto 0 auto 18%;
+    vertical-align: middle;
+  }
+
+  .arrow_s_b {
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 1%;
+  }
+
+  .arrow_s_b:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: rgb(82, 160, 224);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+  }
+
+  .arrow_s_b:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    margin-top: -7px;
+  }
+
+  .category2 {
+    background-color: white;
+    height: 20%;
+    display: flex;
+    margin-bottom: 5%;
+  }
+
+  .picture2 {
+    width: 75%;
+    height: 100%;
+    margin-left: 4%;
+  }
+
+  .arrow_s_b2 {
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 11%;
+  }
+  .arrow_s_b2:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: rgb(35, 100, 221);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+  }
+  .arrow_s_b2:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    margin-top: -7px;
+  }
+
+  .category3 {
+    background-color: white;
+    height: 20%;
+    display: flex;
+  }
+
+  .picture3 {
+    width: 53%;
+    height: 80%;
+    margin: auto 0 auto 4%;
+  }
+
+  .picture4 {
+    width: 27%;
+    height: 80%;
+    margin: auto 0 auto 4%;
+  }
+
+  .arrow_s_b3 {
+    position: relative;
+    display: inline-block;
+    padding-left: 22px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 2%;
+  }
+  .arrow_s_b3:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background: rgb(28, 161, 121);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+  }
+  .arrow_s_b3:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    margin-top: -7px;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  #business-bg {
+    background: url(../img/business_recruitment-bg.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0.5%;
+    position: relative;
+  }
+
+  #business-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  #business-content {
+    background-color: white;
+    width: 60%;
+    margin: 5% auto;
+    padding: 1% 5% 5% 5%;
+    opacity: 0.85;
+  }
+
+  .service {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .information {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.5em;
+    line-height: 0;
+    color: rgb(69, 101, 151);
+    font-weight: 500;
+    margin-top: -3%;
+  }
+
+  .characteristic {
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 0.7em;
+    margin-top: 5%;
+    color: rgb(69, 101, 151);
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 4% 0%;
+    text-align: justify;
+  }
+
+  .under-info {
+    margin-top: 5%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #itemization {
+    font-size: 16px;
+    margin-left: 4%;
+    margin-top: 7%;
+    display: inline-block;
+    width: 260px;
+    text-align: left;
+  }
+
+  #financial-disclosure {
+    margin-left: 4%;
+    margin-top: 7%;
+    margin-bottom: 11%;
+    display: inline-block;
+    width: 220px;
+    height: 150px;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .this-month {
+    font-size: 16px;
+    color: white;
+    background-color: #1a72d0;
+    text-align: left;
+  }
+
+  .category1 {
+    background-color: white;
+    display: flex;
+    margin-bottom: 5%;
+    height: 22%;
+  }
+
+  .picture1 {
+    width: 25%;
+    margin-left: 7%;
+  }
+  .picture1 a {
+    display: block;
+    height: 100%;
+  }
+  .picture1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .details {
+    font-size: 13px;
+    margin: auto 0 auto 15%;
+    vertical-align: middle;
+  }
+
+  .arrow_s_b {
+    position: relative;
+    display: inline-block;
+    padding-left: 18px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 2%;
+  }
+
+  .arrow_s_b:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: rgb(82, 160, 224);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+  }
+
+  .arrow_s_b:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 9px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    margin-top: -9px;
+  }
+
+  .category2 {
+    background-color: white;
+    height: 18%;
+    display: flex;
+    margin-bottom: 5%;
+  }
+
+  .picture2 {
+    width: 75%;
+    height: 100%;
+    margin-left: 4%;
+  }
+  .picture2 a {
+    display: block;
+    height: 100%;
+  }
+  .picture2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .arrow_s_b2 {
+    position: relative;
+    display: inline-block;
+    padding-left: 18px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 11%;
+  }
+  .arrow_s_b2:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: rgb(35, 100, 221);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+  }
+  .arrow_s_b2:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 9px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    margin-top: -9px;
+  }
+
+  .category3 {
+    background-color: white;
+    height: 18%;
+    display: flex;
+  }
+
+  .picture3 {
+    width: 53%;
+    height: 80%;
+    margin: auto 0 auto 4%;
+  }
+
+  .picture3 a {
+    display: block;
+    height: 100%;
+  }
+  .picture3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .picture4 {
+    width: 27%;
+    height: 80%;
+    margin: auto 0 auto 4%;
+  }
+
+  .arrow_s_b3 {
+    position: relative;
+    display: inline-block;
+    padding-left: 18px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 2%;
+  }
+  .arrow_s_b3:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: rgb(28, 161, 121);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -12px;
+  }
+  .arrow_s_b3:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 9px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    margin-top: -9px;
+  }
+}

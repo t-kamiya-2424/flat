@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	
+	
+<meta name="keywords" content=",,,,,," />
+ <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name = "format-detection" content = "telephone=no">
+
+<link href="css/common.css" rel="stylesheet" type="text/css" /> 
+ <link href="css/conduct.css" rel="stylesheet" type="text/css" />
+
+
+	
+<script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<script>
+   (function(d) {
+     var config = {
+       kitId: 'dgw3vbb',
+       scriptTimeout: 3000,
+       async: true
+     },
+     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+   })(document);
+ </script>
+ 
+<title></title>
+
+
+
+<!--nav-->
+<script src="nav/jquery-3.3.1.min.js"></script>	
+	
+<script type="text/javascript" src="nav/script.js"></script>
+	
+<link href="nav/style.css" rel="stylesheet" type="text/css" />
+
+
+
+<!--imgchange-->
+
+<script src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+ $(function(){
+    var wid = $(window).width();
+    if( wid < 640 ){
+        $('.imgChange').each(function(){
+            $(this).attr("src",$(this).attr("src").replace('_pc', '_sp'));
+        });
+    }
+});</script>
+
+
+
+
+
+
+<!-- スムーズスクロール -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+
+
+
+<script>
+$(function() {
+	$("body").on("click", "a", function(e) {
+		var _this = $(this);
+		var _href = _this.attr("href");
+
+		if (_href.charAt(0,1) == "#") {
+			e.preventDefault();
+			var _target  = $(_href == "#" || _href == "" ? $("html") : _href);
+			if (_target.length == "0") _target = $("html");
+			var position = _target.offset().top;
+			var _scroll  = _this.data("scroll");
+			if (_scroll !== undefined) position = position + Number(_scroll);
+			if (position <= 0) position = 1;	//Android2系でスクロールのバグ対策
+			$("html, body").animate({scrollTop : position} ,500, "swing");
+			return false;
+		}
+	});
+});
+
+</script>
+
+<!--sride-->
+
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+
+	
+<script type="text/javascript" src="sride/jquery.glide.min.js"></script>
+	
+<link href="sride/slide.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('.slider').bxSlider(
+	
+	{
+		auto: true,
+		pause:	8000,
+		speed:1000,
+		mode: 'horizontal',
+		infiniteLoop: true, //ループさせるか否か
+		pager:true
+		}
+
+		
+	
+	);
+});</script>
+	
+	
+<script type="text/javascript">
+   $(function() {
+      // スクロールしたときに実行
+      $(window).scroll(function () {
+         // 目的のスクロール量を設定(px)
+         var TargetPos = -150;
+         // 現在のスクロール位置を取得
+         var ScrollPos = $(window).scrollTop();
+         // 現在位置が目的のスクロール量に達しているかどうかを判断
+         if( ScrollPos >= TargetPos) {
+            // 達していれば表示
+            $("#topbutton01").fadeIn();
+         }
+         else {
+            // 達していなければ非表示
+            $("#topbutton01").fadeOut();
+         }
+      });
+   });
+</script>
+	
+	
+<script type="text/javascript">
+   $(function() {
+      // スクロールしたときに実行
+      $(window).scroll(function () {
+         // 目的のスクロール量を設定(px)
+         var TargetPos = 150;
+         // 現在のスクロール位置を取得
+         var ScrollPos = $(window).scrollTop();
+         // 現在位置が目的のスクロール量に達しているかどうかを判断
+         if( ScrollPos >= TargetPos) {
+            // 達していれば表示
+            $("#topbutton02").fadeIn();
+         }
+         else {
+            // 達していなければ非表示
+            $("#topbutton02").fadeOut();
+         }
+      });
+   });
+</script>
+	
+	
+	
+<script type="text/javascript">
+   $(function() {
+      // スクロールしたときに実行
+      $(window).scroll(function () {
+         // 目的のスクロール量を設定(px)
+         var TargetPos = 150;
+         // 現在のスクロール位置を取得
+         var ScrollPos = $(window).scrollTop();
+         // 現在位置が目的のスクロール量に達しているかどうかを判断
+         if( ScrollPos >= TargetPos) {
+            // 達していれば表示
+            $("#topbutton03").fadeIn();
+         }
+         else {
+            // 達していなければ非表示
+            $("#topbutton03").fadeOut();
+         }
+      });
+   });
+</script>	
+	
+	
+
+
+</head>
+
+<body>
+
+	
+
+<div class="wrapper">
+<main>	
+	
+<div id="topbutton01">
+<div id="header">
+
+<div class="in cf">
+
+<div id="logo"><a href="index.html"><img src="img/logo.png"  alt="ロゴ"/></a></div>
+
+<div id="mail-top" class="only-sp"><a href="contact.html"><img src="img/mail_sp.png"  alt="メール" class="imgChange"/></a></div>
+
+	
+	
+<div id="gnav" class="only-pc">
+<ul class="cf">
+
+   <li class="gnav-home"><a href="index.html">HOME</a></li>
+
+   <li class="gnav-management"><a href="management.html">経営理念</a></li>
+      
+   <li class="gnav-business"><a href="business.html">事業案内</a></li>
+      
+   <li class="gnav-store"><a href="store.html">店舗案内</a></li>
+      
+   <li class="gnav-comp"><a href="comp.html">会社概要</a></li>
+      
+   <li class="gnav-recruitment"><a href="recruitment.html">採用情報</a></li>
+	
+</ul>
+<!--gnav--></div>
+	
+
+
+<!--in--></div>
+<!--header--></div>
+<!--topbutton01--></div>
+
+<div id=fixed-cover></div>
+<div id="conduct-bg">
+   <div id ="conduct-content">
+   　 <h2 id="antisocial-forces-policy">反社会勢力排除に関する基本方針</h2>
+      <p class="text">
+      All Flat 株式会社は「反社会勢力」の社会からの排除が、社会全体での取組む課題であることを社会的責任ある企業として認識し、次の事項を基本方針として、「反社会勢力」を排除することを宣言します。
+      </p>
+
+      <ol>
+         <li>反社会勢力に対し、組織全体として対応し、不当な要求に対する役職員の安全を確保します。</li>
+         <li>反社会勢力による不当な要求に備え、平素から警察、弁護士等の外部専門機関と緊密な連携を
+             構築していきます。</li>
+         <li>反社会勢力とは、取引関係を含め一切関係をもちません。また、不当な要求は拒絶します。</li>
+         <li>反社会勢力による不当な要求に対しては、民事・刑事の両面から法的手段を講じて対応します。</li>
+         <li>反社会的勢力による不当な要求が事業活動上の不祥事や従業員の不祥事を理由とする場合であっても、
+             事実を隠蔽することなく、隠蔽のための裏取引を行いません。</li>
+      </ol>
+      <p class="enactment-date">All Flat 株式会社<br>
+         代表取締役 土橋弘一</br>
+         制定日 2017 年 8 月 1 日</p>
+      <P class="line"></P>
+      <h2 id="personal-information">個人情報に関する取扱いについて</br>
+         （個人情報保護宣言）</h2>
+      <p class="text">All-Flat 株式会社</p>
+      <p class="text">
+         当社は、個人情報保護の重要性に鑑み、また、保険代理業に対する社会の信頼をより向上させるため、
+         個人情報の保護に関する法律（個人情報保護法）その他の関連法令・ガイドライン等を遵守して、
+         個人情報を適正に取り扱うとともに、安全管理について適切な措置を講じます。</br>
+         当社は、個人情報の取扱いが適正に行われるように従業者への教育・指導を徹底し、適正な取扱い
+         が行われるように取り組んでまいります。また、個人情報の取扱いに関する苦情・相談に迅速に対
+         応し、当社の個人情報の取扱い及び安全管理に関わる適切な措置については、適宜見直し改善いたします。
+      </p>
+      <p class="text">(1) 個人情報の取得</br>
+      当社は、業務上必要な範囲内かつ、適法で公正な手段により個人情報を取得します。
+      </p>
+      <p class="text">(2) 個人情報の利用目的<br>
+         当社は、取得した個人情報を、保険会社より保険募集業務の委託を受けて、当該業務の遂行に必要
+         な範囲で利用します。また、当社は貸金業を営んでおり、当該業務の遂行に必要な範囲でも利用し
+         ます。それら以外の他の目的に利用することはありません。当社における具体的な個人情報の利用
+         目的は次のとおりです。</br>
+         ①当社が委託を受ける保険会社の各種商品やサービスの案内・提供・維持管理</br>
+         ②当社が営む、住宅ローン取次業務、貸金業</br>
+         土地の利用目的を変更する場合は、その内容をご本人に対し、原則として書面等により通知いたし
+         ます。
+      </p>
+      <p class="text">(3) 個人データの安全管理措置</br>
+         当社は、取り扱う個人データの漏えい、滅失またはき損の防止その他の個人データの安全管理のた
+         め、安全管理に関する取扱規程等の整備および実施体制の整備等、十分なセキュリティ対策を講じ
+         るとともに、利用目的の達成に必要とされる正確性・最新性を確保するために適切な措置を講じて
+         います。
+      </p>
+      <p class="text">(4) 個人データの第三者への提供</br>
+         当社は、個人データを第三者に提供するにあたり、以下の場合を除き、ご本人の同意なく第三者に
+         個人データを提供しません。</br>
+         ①法令に基づく場合</br>
+         ②人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難
+         であるとき。</br>
+         ③公衆衛生の向上又は児童の健全な育成の推進のために特に必要がある場合であって、本人の同意
+         を得ることが困難であるとき。</br>
+         ④国の機関若しくは地方公共団体又はその委託を受けた者が法令の定める事務を遂行することに対
+         して協力する必要がある場合であって、本人の同意を得ることにより当該事務の遂行に支障を及ぼ
+         す恐れがあるとき。
+      </p>
+      <p class="text">(5) 当社に対するご照会</br>
+         下記お問い合わせ窓口にお問い合わせください。社の窓口にお問い合わせください。ご照会者がご
+         本人であることをご確認させていただいたうえで、対応させていただきますので、あらかじめご了
+         承願います。
+      </p>
+      <p class="text">■お問い合わせ先</br>
+         代理店（所在地）東京都渋谷区代々木2-23-1 ニューステイトメナー1342 号室</br>
+（名　称）All-Flat 株式会社 新宿店</br>
+電話　03-6300-6720</br>
+（受付時間：9 時30 分～ 18 時30 分 水曜日、日曜日、祝日、年末年始除く）
+      </p>
+      <P class="line"></P>
+      <h2 id="attitude-to-work">仕事に対する姿勢</h2>
+      <p class="text">(1) ？（クエッション）を常に大切に、</br>
+         お客様及び仕事に対する姿勢・提案は、これで満足ということはなく、よりよいものはないか。常
+         に疑問を持って行動しよう。
+      </p>
+      <p class="text">(2) コロンブスの卵を大切に<br>
+         仕事に対する考え方は、単調にならず、簡単なことでも、色々な発想をして、当たり前な考えを捨
+         てて鳥の目、虫の目を持ち、コロンブスの卵を探そう
+      </p>
+      <p class="text">(3) リスクヘッジを常に考えて行動しよう。</br>
+         世の中が、激変している現在、色々なリスクがあるなか、常にリスクヘッジを考え行動しよう。</p>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="footer">
+<div class="in cf">
+  	
+
+
+<ul class="foot_menu cf">
+<li><a href="business.html">【事業案内】</a></li>
+<li></li>
+</ul>
+	
+
+<ul class="foot_menu cf">
+<li><a href="store.html">【店舗案内】</a></li>
+<li class="only-sp"></li>
+<li><a href="store.html#sinjyuku">新宿店</a></li>
+<li><a href="store.html#funabashi">船橋店</a></li>
+<li><a href="store.html#kashiwa">柏店</a></li>
+<li><a href="store.html#yokohama">横浜店</a></li>
+</ul>
+	
+<ul class="foot_menu cf">
+<li><a href="comp.html">【会社概要】</a></li>
+<li></li>
+</ul>
+	
+<ul class="foot_menu cf">
+<li><a href="recruitment.html">【採用情報】</a></li>
+<li></li>
+</ul>
+	
+<ul class="foot_menu cf">
+   <li><a href="conduct.html#antisocial-forces-policy" alt="">反社会勢力排除に関する基本方針</a></li>
+   <li><a href="conduct.html#personal-information" alt="">個人情報保護宣言</a></li>
+   <li><a href="conduct.html#attitude-to-work" alt="">仕事に対する姿勢</a></li>
+<li></li>
+</ul>
+	
+<!--in--></div>
+<!--footer--></div>	
+	
+	
+	
+<diV class="in">
+<p class="foot-logo"><img src="img/logo02.png" alt="foot-logo"/></p>	
+<p class="copy">All-Flat 株式会社　〒151-0053東京都渋谷区代々木2-23-1 ニューステイトメナー1342号　TEL:03-6300-6720　FAX:03-6300-6741<br>
+Copyright (c) All-Flat Co., Ltd. All Rights Reserved.</p>
+</diV>	
+
+
+	  
+<div id="topbutton03" class="cf">
+<p id="back" class="pageTop"><a href="#"><img src="img/gototop.png"  alt="topへ戻る"/></a></p>
+</div>	  
+	  
+</main>
+	
+	
+<div class="only-sp">
+<div class="menu-trigger" href="">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+	
+
+<nav>
+
+
+<ul class="cf">
+<li><a href="index.html">HOME</a></li>
+<li><a href="management.html">経営理念</a></li>
+<li><a href="business.html">事業案内</a></li>
+<li><a href="store.html">店舗案内</a></li>
+<li><a href="comp.html">会社概要</a></li>
+<li><a href="recruitment.html">採用情報</a></li>
+</ul>
+	
+
+ 
+  </nav>
+  <div class="overlay"></div>
+</div>
+
+
+<!--wrapper--></div>
+
+</body>
+</html>

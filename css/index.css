@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wh{background:#fff;
+padding:5%;
+margin: 5% auto;
+width:80%;}
+
+.sub li{
+margin: 2% 5%;}
+
+@media only screen and (min-width: 640px) {
+
+.sub{
+margin: 5%;}
+	
+	
+.sub li{
+margin: 0% 0%;}
+	
+.sub01{width:48%;
+	float:left;
+	margin-bottom: 3%;}
+	
+.sub02{width:48%;
+	float:right;
+	margin-bottom: 3%;}	
+	
+}
+

@@ -1,0 +1,538 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "shs_regular";
+  src: url("../font/SourceHanSansJP-Regular.eot?") format("eot"),
+    url("../font/SourceHanSansJP-Regular.woff") format("woff");
+}
+
+/* -----------------------------------------------------------
+ フォントサイズ基本
+----------------------------------------------------------- */
+html {
+  font-size: 18px;
+  font-family: a-otf-ud-shin-maru-go-pr6n, "游ゴシック", "Yu Gothic", "メイリオ",
+    "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo",
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  overflow-y: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.in {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+#top a:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.cf:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  font-size: 0.1em;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  color: #595757;
+  word-wrap: break-word;
+}
+
+.only-pc {
+  display: none;
+} /*-----sp----*/
+.only-sp {
+  display: block;
+} /*-----sp----*/
+
+#main {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 10px;
+}
+
+.content {
+  line-height: 1.9em;
+}
+
+.box {
+  margin-bottom: 15%;
+}
+
+/*-----------------------------
+header
+-------------------------------*/
+
+#header {
+  padding: 2%;
+}
+
+#logo {
+  width: 70%;
+  float: left;
+  margin-top: 2%;
+}
+
+#company {
+}
+#company p {
+  color: #003366;
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  margin-top: 5%;
+  margin-left: 20px;
+}
+
+#tel-top {
+  width: 13%;
+  float: left;
+  margin-left: 5%;
+}
+
+#mail-top {
+  width: 13%;
+  float: right;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+
+#menuButton {
+  width: 11%;
+  float: right;
+  margin-top: 2%;
+}
+
+.content {
+  background: #f5f3f2;
+  padding-bottom: 10%;
+}
+
+/*-----------------------------
+key
+-------------------------------*/
+
+#key {
+  margin-top: 25%;
+}
+
+#key01 {
+  background: url(../img/key-bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+#key01 img {
+  width: 50%;
+  margin: 5% auto;
+  display: block;
+}
+
+/*-----------------------------
+side
+-------------------------------*/
+
+#main {
+  margin-bottom: 8%;
+  margin-top: 3%;
+}
+
+/*-----------------------------
+footer
+-------------------------------*/
+
+#footer {
+  margin-top: 10%;
+}
+
+.foot-left {
+  margin: 5% 0%;
+  font-size: 16px;
+}
+
+.foot-right {
+  font-size: 16px;
+}
+
+.foot-pink {
+  background: #ea5a73;
+  color: #fff;
+  text-align: center;
+  padding: 2% 0%;
+}
+
+.foot-blue {
+  background: #51b8ea;
+  color: #fff;
+  text-align: center;
+  padding: 2% 0%;
+}
+
+.foot-logo {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.foot-logo a {
+  color: #000;
+}
+
+.foot_menu li {
+  width: 49.6%;
+  float: left;
+  text-align: center;
+  border-bottom: solid 1px #a6a6a6;
+  height: 3em;
+  line-height: 3em;
+  font-size: 12px;
+}
+
+.fr {
+  border-right: solid 1px #a6a6a6;
+}
+
+.foot_menu a {
+  color: #000;
+}
+
+.sns img {
+  width: 46%;
+  margin: 2% 2%;
+}
+
+.sns {
+  width: 30%;
+  margin: 3% auto;
+}
+
+.go-top {
+  width: 10%;
+  float: right;
+  padding: 2%;
+}
+
+.copy {
+  font-size: 10px;
+  padding-top: 2%;
+  text-align: center;
+}
+
+/*-------固定戻る---------*/
+
+#topbutton01 {
+  /* ▼表示位置を画面の右下に固定 */
+  position: fixed; /* ←表示場所を固定 */
+  top: 0px; /* ←下端からの距離 */
+  right: 0px; /* ←右端からの距離 */
+  width: 100%; /* ←横幅 */
+  opacity: 1;
+  /* ▼最初は非表示にしておく */
+  display: block;
+  background: #fff;
+}
+
+#topbutton03 {
+  /* ▼表示位置を画面の右下に固定 */
+  position: fixed; /* ←表示場所を固定 */
+  bottom: 3%; /* ←下端からの距離 */
+  right: 5px; /* ←右端からの距離 */
+  width: 6em; /* ←横幅 */
+
+  /* ▼最初は非表示にしておく */
+  display: none;
+  opacity: 0.7;
+}
+
+nav {
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 20px;
+    overflow-y: scroll;
+    font-family: a-otf-ud-shin-maru-go-pr6n, "游ゴシック", "Yu Gothic",
+      "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "Meiryo",
+      "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .only-pc {
+    display: block;
+  } /*-----pc----*/
+  .only-sp {
+    display: none;
+  } /*-----pc----*/
+
+  .in {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+  }
+
+  h1 {
+    margin-bottom: 0%;
+    font-size: 10px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  /*-----------------------------
+header
+-------------------------------*/
+
+  #header {
+    padding: 0% 0% 2% 0%;
+  }
+
+  #logo {
+    width: 30%;
+    float: left;
+    padding-top: 0%;
+    margin-top: 2%;
+  }
+
+  #company {
+  }
+  #company p {
+    color: #003366;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    margin-top: 3%;
+    margin-left: 20px;
+  }
+
+  #tel-top {
+    width: 25%;
+    float: right;
+    margin-top: 0%;
+  }
+
+  #mail-top {
+    width: 35%;
+    float: left;
+    margin-left: 15%;
+    margin-top: 4%;
+  }
+
+  /*-----------------------------
+gnav
+-------------------------------*/
+
+  #gnav {
+    float: right;
+    width: 60%;
+    margin-top: 3%;
+  }
+
+  #gnav li {
+    width: 16.6%;
+    max-width: 100px;
+    float: left;
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 12px;
+    padding: 5px 0;
+  }
+
+  #gnav li :last-child {
+    /*border-right: solid 1px #e2e2e2;*/
+  }
+
+  #gnav a {
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+
+  #gnav {
+    border-bottom: solid 0px #e2e2e2;
+    border-top: solid 0px #e2e2e2;
+  }
+
+  .gnav-home {
+    background-image: url(../img/gnav01.png);
+  }
+  .gnav-management {
+    background-image: url(../img/gnav02.png);
+  }
+  .gnav-business {
+    background-image: url(../img/gnav03.png);
+  }
+  .gnav-store {
+    background-image: url(../img/gnav04.png);
+  }
+  .gnav-comp {
+    background-image: url(../img/gnav05.png);
+  }
+  .gnav-recruitment {
+    background-image: url(../img/gnav06.png);
+  }
+
+  /*-----------------------------
+key
+-------------------------------*/
+
+  #key {
+    margin-top: 0%;
+  }
+
+  #key01 {
+    background: url(../img/key-bg.png) no-repeat;
+    background-size: 100% 100%;
+  }
+
+  #key01 img {
+    width: 30%;
+  }
+
+  /*-----------------------------
+main
+-------------------------------*/
+
+  #main {
+    margin-bottom: 8%;
+    width: 70%;
+    float: right;
+  }
+
+  #side {
+    float: left;
+    width: 27%;
+    margin-top: 3%;
+  }
+
+  /*-----------------------------
+footer
+-------------------------------*/
+
+  .foot-logo {
+    width: 10%;
+    float: left;
+    margin-top: 2%;
+  }
+
+  .copy {
+    width: 85%;
+    float: left;
+    text-align: left;
+    padding-top: 0%;
+    margin-top: 2%;
+    font-family: "小塚ゴシック Pro", "Kozuka Gothic Pro", sans-serif;
+  }
+
+  .foot-logo img {
+    width: 90%;
+  }
+
+  #footer {
+    background: #67a9d7;
+    margin-top: 0%;
+  }
+
+  .foot_menu {
+    border: none;
+    float: left;
+    width: 20%;
+    margin-left: 0%;
+    color: #fff;
+  }
+
+  .foot_menu li {
+    font-size: 10px;
+  }
+
+  .foot_menu a {
+    color: #fff;
+  }
+
+  .foot_menu li {
+    float: none;
+    width: 120%;
+    text-align: left;
+    margin-top: 0%;
+    padding: 0% 0% 0% 0%;
+    border: none;
+    font-size: 15px;
+  }
+
+  .foot-link {
+    width: 30%;
+    padding: 6% 0% 0% 24%;
+  }
+  .foot-contact {
+    width: 50%;
+    padding: 2% 0%;
+    margin: 2% auto;
+  }
+
+  /*-------固定戻る---------*/
+
+  #topbutton01 {
+    /* ▼表示位置を画面の右下に固定 */
+    position: inherit; /* ←表示場所を固定 */
+    top: 0px; /* ←下端からの距離 */
+    right: 0px; /* ←右端からの距離 */
+    width: 100%; /* ←横幅 */
+
+    /* ▼最初は非表示にしておく */
+    display: block;
+    background: #fff;
+  }
+
+  #topbutton03 {
+    /* ▼表示位置を画面の右下に固定 */
+    position: fixed; /* ←表示場所を固定 */
+    bottom: 3%; /* ←下端からの距離 */
+    right: 18px; /* ←右端からの距離 */
+    width: 5em; /* ←横幅 */
+
+    /* ▼最初は非表示にしておく */
+    display: none;
+    opacity: 0.7;
+  }
+}
